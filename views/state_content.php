@@ -29,7 +29,7 @@ if ($countrySlug === 'usa') $countryName = 'USA';
     <!-- SEO ARTICLE SECTION -->
     <!-- ========================================== -->
     <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Annual Leave Calculator <?= $stateName ?> (<?= $countryName ?>)</h2>
+        <h1 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Annual Leave Calculator <?= $stateName ?> (<?= $countryName ?>)</h1>
     </div>
 
     <!-- Dynamic Spintax Introduction -->

@@ -11,27 +11,77 @@ CREATE TABLE IF NOT EXISTS leave_rules (
     UNIQUE KEY unique_country_state (country_slug, state_slug)
 );
 
--- Insert dummy data for USA (few states)
-INSERT INTO leave_rules (country_slug, state_slug, state_name, annual_leave_weeks, working_hours_per_week) VALUES
-('usa', 'california', 'California', 2.00, 40.00),
-('usa', 'texas', 'Texas', 2.00, 40.00),
-('usa', 'new-york', 'New York', 2.00, 40.00),
-('usa', 'florida', 'Florida', 2.00, 40.00)
-ON DUPLICATE KEY UPDATE annual_leave_weeks=VALUES(annual_leave_weeks);
+-- USA (50 States)
+INSERT IGNORE INTO leave_rules (country_slug, state_slug, state_name, annual_leave_weeks, leave_loading_percentage, working_hours_per_week) VALUES
+('usa', 'alabama', 'Alabama', 2.00, 0.00, 40.00),
+('usa', 'alaska', 'Alaska', 2.00, 0.00, 40.00),
+('usa', 'arizona', 'Arizona', 2.00, 0.00, 40.00),
+('usa', 'arkansas', 'Arkansas', 2.00, 0.00, 40.00),
+('usa', 'california', 'California', 2.00, 0.00, 40.00),
+('usa', 'colorado', 'Colorado', 2.00, 0.00, 40.00),
+('usa', 'connecticut', 'Connecticut', 2.00, 0.00, 40.00),
+('usa', 'delaware', 'Delaware', 2.00, 0.00, 40.00),
+('usa', 'florida', 'Florida', 2.00, 0.00, 40.00),
+('usa', 'georgia', 'Georgia', 2.00, 0.00, 40.00),
+('usa', 'hawaii', 'Hawaii', 2.00, 0.00, 40.00),
+('usa', 'idaho', 'Idaho', 2.00, 0.00, 40.00),
+('usa', 'illinois', 'Illinois', 2.00, 0.00, 40.00),
+('usa', 'indiana', 'Indiana', 2.00, 0.00, 40.00),
+('usa', 'iowa', 'Iowa', 2.00, 0.00, 40.00),
+('usa', 'kansas', 'Kansas', 2.00, 0.00, 40.00),
+('usa', 'kentucky', 'Kentucky', 2.00, 0.00, 40.00),
+('usa', 'louisiana', 'Louisiana', 2.00, 0.00, 40.00),
+('usa', 'maine', 'Maine', 2.00, 0.00, 40.00),
+('usa', 'maryland', 'Maryland', 2.00, 0.00, 40.00),
+('usa', 'massachusetts', 'Massachusetts', 2.00, 0.00, 40.00),
+('usa', 'michigan', 'Michigan', 2.00, 0.00, 40.00),
+('usa', 'minnesota', 'Minnesota', 2.00, 0.00, 40.00),
+('usa', 'mississippi', 'Mississippi', 2.00, 0.00, 40.00),
+('usa', 'missouri', 'Missouri', 2.00, 0.00, 40.00),
+('usa', 'montana', 'Montana', 2.00, 0.00, 40.00),
+('usa', 'nebraska', 'Nebraska', 2.00, 0.00, 40.00),
+('usa', 'nevada', 'Nevada', 2.00, 0.00, 40.00),
+('usa', 'new-hampshire', 'New Hampshire', 2.00, 0.00, 40.00),
+('usa', 'new-jersey', 'New Jersey', 2.00, 0.00, 40.00),
+('usa', 'new-mexico', 'New Mexico', 2.00, 0.00, 40.00),
+('usa', 'new-york', 'New York', 2.00, 0.00, 40.00),
+('usa', 'north-carolina', 'North Carolina', 2.00, 0.00, 40.00),
+('usa', 'north-dakota', 'North Dakota', 2.00, 0.00, 40.00),
+('usa', 'ohio', 'Ohio', 2.00, 0.00, 40.00),
+('usa', 'oklahoma', 'Oklahoma', 2.00, 0.00, 40.00),
+('usa', 'oregon', 'Oregon', 2.00, 0.00, 40.00),
+('usa', 'pennsylvania', 'Pennsylvania', 2.00, 0.00, 40.00),
+('usa', 'rhode-island', 'Rhode Island', 2.00, 0.00, 40.00),
+('usa', 'south-carolina', 'South Carolina', 2.00, 0.00, 40.00),
+('usa', 'south-dakota', 'South Dakota', 2.00, 0.00, 40.00),
+('usa', 'tennessee', 'Tennessee', 2.00, 0.00, 40.00),
+('usa', 'texas', 'Texas', 2.00, 0.00, 40.00),
+('usa', 'utah', 'Utah', 2.00, 0.00, 40.00),
+('usa', 'vermont', 'Vermont', 2.00, 0.00, 40.00),
+('usa', 'virginia', 'Virginia', 2.00, 0.00, 40.00),
+('usa', 'washington', 'Washington', 2.00, 0.00, 40.00),
+('usa', 'west-virginia', 'West Virginia', 2.00, 0.00, 40.00),
+('usa', 'wisconsin', 'Wisconsin', 2.00, 0.00, 40.00),
+('usa', 'wyoming', 'Wyoming', 2.00, 0.00, 40.00);
 
--- Insert dummy data for Canada (few provinces)
-INSERT INTO leave_rules (country_slug, state_slug, state_name, annual_leave_weeks, working_hours_per_week) VALUES
-('canada', 'alberta', 'Alberta', 2.00, 40.00),
-('canada', 'ontario', 'Ontario', 2.00, 44.00),
-('canada', 'british-columbia', 'British Columbia', 2.00, 40.00)
-ON DUPLICATE KEY UPDATE annual_leave_weeks=VALUES(annual_leave_weeks);
+-- Canada (10 Provinces)
+INSERT IGNORE INTO leave_rules (country_slug, state_slug, state_name, annual_leave_weeks, leave_loading_percentage, working_hours_per_week) VALUES
+('canada', 'alberta', 'Alberta', 2.00, 0.00, 40.00),
+('canada', 'british-columbia', 'British Columbia', 2.00, 0.00, 40.00),
+('canada', 'manitoba', 'Manitoba', 2.00, 0.00, 40.00),
+('canada', 'new-brunswick', 'New Brunswick', 2.00, 0.00, 40.00),
+('canada', 'newfoundland-and-labrador', 'Newfoundland and Labrador', 2.00, 0.00, 40.00),
+('canada', 'nova-scotia', 'Nova Scotia', 2.00, 0.00, 40.00),
+('canada', 'ontario', 'Ontario', 2.00, 0.00, 40.00),
+('canada', 'prince-edward-island', 'Prince Edward Island', 2.00, 0.00, 40.00),
+('canada', 'quebec', 'Quebec', 2.00, 0.00, 40.00),
+('canada', 'saskatchewan', 'Saskatchewan', 2.00, 0.00, 40.00);
 
--- Insert dummy data for Australia (all 6 states + 2 territories)
-INSERT INTO leave_rules (country_slug, state_slug, state_name, annual_leave_weeks, leave_loading_percentage, working_hours_per_week) VALUES
+-- Australia (6 States)
+INSERT IGNORE INTO leave_rules (country_slug, state_slug, state_name, annual_leave_weeks, leave_loading_percentage, working_hours_per_week) VALUES
 ('australia', 'queensland', 'Queensland', 4.00, 17.50, 38.00),
 ('australia', 'new-south-wales', 'New South Wales', 4.00, 17.50, 38.00),
 ('australia', 'victoria', 'Victoria', 4.00, 17.50, 38.00),
 ('australia', 'tasmania', 'Tasmania', 4.00, 17.50, 38.00),
 ('australia', 'south-australia', 'South Australia', 4.00, 17.50, 38.00),
-('australia', 'western-australia', 'Western Australia', 4.00, 17.50, 38.00)
-ON DUPLICATE KEY UPDATE annual_leave_weeks=VALUES(annual_leave_weeks);
+('australia', 'western-australia', 'Western Australia', 4.00, 17.50, 38.00);
